@@ -9,12 +9,11 @@ class ProjectHelper:
 
     def open_add_project_page(self):
         wd = self.app.wd
-        wd.get('http://localhost/mantisbt-2.25.4/manage_proj_create_page.php')
+        wd.get(self.app.base_url + 'manage_proj_create_page.php')
 
     def open_project_page(self):
         wd = self.app.wd
-        wd.get('http://localhost/mantisbt-2.25.4/manage_proj_page.php')
-
+        wd.get(self.app.base_url + 'manage_proj_page.php')
 
     def fill_add_form(self, project):
         wd = self.app.wd
