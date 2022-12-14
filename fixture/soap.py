@@ -8,15 +8,16 @@ class SoapHelper:
     def __init__(self, app):
         self.app = app
 
-    def can_login(self, username, password):
-        client = Client(self.app.soap_url)
-        try:
-            client.service.mc_login(username, password)
-            return True
-        except WebFault:
-            return False
+    # def can_login(self, username, password):
+    #     client = Client(self.app.soap_url)
+    #     try:
+    #         client.service.mc_login(username, password)
+    #         return True
+    #     except WebFault:
+    #         return False
 
     def get_project_list(self):
+        # Add username, password from config
         username = self.app.config['webadmin']['username']
         password = self.app.config['webadmin']['password']
         client = Client(self.app.soap_url)

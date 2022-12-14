@@ -9,10 +9,12 @@ class ProjectHelper:
 
     def open_add_project_page(self):
         wd = self.app.wd
+        # Fix get('path')
         wd.get(self.app.base_url + 'manage_proj_create_page.php')
 
     def open_project_page(self):
         wd = self.app.wd
+        # Fix get('path')
         wd.get(self.app.base_url + 'manage_proj_page.php')
 
     def fill_add_form(self, project):
